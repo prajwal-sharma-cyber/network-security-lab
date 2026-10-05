@@ -1,0 +1,7 @@
+rule_id,source,destination,protocol,action,reason
+FW001,Internet,DMZ-Web,HTTPS,ALLOW,Public web access
+FW002,Internet,Internal-Network,ANY,DENY,Block direct internal access
+FW003,User-VLAN,Server-VLAN,HTTPS,ALLOW,Application access
+FW004,User-VLAN,Admin-VLAN,ANY,DENY,Privilege separation
+FW005,Admin-VLAN,Server-VLAN,SSH-HTTPS,ALLOW,Administration
+FW006,Guest-VLAN,Internal-Network,ANY,DENY,Guest isolation
